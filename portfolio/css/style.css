@@ -19,7 +19,12 @@ body {
     width: 1440px;
     margin: 0 auto;
     padding: 0 20px;
-  }
+}
+
+.wrapper__content {
+    width: 1440px;
+    margin: 0  auto;
+}
 
 /* Header */
 
@@ -61,6 +66,30 @@ body {
     padding: 20px 30px;
 }
 
+.language {
+    position: relative;
+    padding-top: 20px;
+}
+
+.language::before {
+    position: absolute;
+    content: "/";
+    left: 35px;
+    top: 25px;
+}
+
+.language-button {
+    padding-right: 25px;
+    font-size: 20px;
+    line-height: 50px;
+    background: inherit;
+    color: var(--color-white);
+}
+
+
+.language-button__current {
+    color: var(--color-gold);
+}
 
 /* Hero */
 

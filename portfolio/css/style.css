@@ -4,6 +4,10 @@
     --color-white: #ffffff;
   }
 
+html {
+    scroll-behavior: smooth; 
+}
+
 body {
     display: flex;
     flex-direction: column;
@@ -42,10 +46,17 @@ body {
 }
 
 .button {
+    font-family: "Inter";
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 40px;
     width: 220px;
     height: 55px;
     background: #BDAE82;
-    margin: 25px 0 0 60px;
+}
+
+.button:hover {
+    color:var(--color-white);
 }
 
 /* Navigation */
@@ -64,6 +75,10 @@ body {
 .navigation__item {
     align-self: center;
     padding: 20px 30px;
+}
+
+.navigation__link {
+    color: var(--color-white);
 }
 
 .language {
@@ -93,6 +108,11 @@ body {
 
 /* Hero */
 
+.hero__block {
+    padding-top: 160px;
+    padding-left: 60px;
+}
+
 .hero__image {
     background-image: url('/portfolio/assets/img/header-bg.jpg');
     background-position: center -90px;
@@ -104,11 +124,12 @@ body {
     font-family: "Merriweather";
     font-size: 60px;
     line-height: 120px;
-    padding: 160px 0 0 60px;
+    
 }
 
 .hero__text {
-    padding: 10px 0 0 60px;
+    padding-top: 10px;
+    padding-bottom: 25px;
 }
 
 /* Skills */
@@ -130,5 +151,63 @@ body {
     color: var(--color-gold);
     background-color: var(--color-black);
     padding: 0 20px;
+}
+
+.skills__list {
+    display: flex;
+    justify-content: space-between;
+    text-align: center;
+}
+
+.skills__item {
+    padding-top: 60px;
+}
+
+.skills__description {
+    padding-top: 50px;
+    font-weight: 700;
+}
+
+.skills__text {
+    padding-top: 20px;
+    font-size: 18px;
+    line-height: 36px;
+}
+
+/* Portfolio */
+
+.portfolio__list {
+    padding-top: 60px;
+    display: flex;
+    justify-content: center;
+}
+
+.portfolio__item {
+    padding-right: 5px;
+}
+
+.portfolio__item:last-child {
+    padding: 0;
+}
+
+.inactive__button {
+    border: 2px solid #BDAE82;
+    background-color: var(--color-black);
+    color: var(--color-gold);
+}
+
+.portfolio__list__img {
+    padding-top: 35px;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.portfolio__item__img:nth-child(3n) {
+    padding-right: 0px;
+}
+
+.portfolio__item__img {
+    padding-top: 25px;
+    padding-right: 25px;
 }
 

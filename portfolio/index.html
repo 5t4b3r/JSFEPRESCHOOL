@@ -20,13 +20,13 @@
         <div class="wrapper__content">
             <div class="header__image">
                 <nav class="navigation">
-                    <img class="header__logo" alt="header logo" src="./assets/svg/logo.svg">
+                    <img class="header__logo" src="./assets/svg/logo.svg" alt="header logo">
                     <ul class="navigation__list">
-                        <li class="navigation__item">Skills</li>
-                        <li class="navigation__item">Portfolio</li>
-                        <li class="navigation__item">Video</li>
-                        <li class="navigation__item">Price</li>
-                        <li class="navigation__item">Contacts</li>
+                        <li class="navigation__item"><a class="navigation__link" href="#skills">Skills</a></li>
+                        <li class="navigation__item"><a class="navigation__link" href="#portfolio">Portfolio</a></li>
+                        <li class="navigation__item"><a class="navigation__link" href="#video">Video</a></li>
+                        <li class="navigation__item"><a class="navigation__link" href="#price">Price</a></li>
+                        <li class="navigation__item"><a class="navigation__link" href="#contacts">Contacts</a></li>
                     </ul>
                     <div class="language">
                         <a class="language-button language-button__current" href="#">en</a>
@@ -49,53 +49,78 @@
                     </div>
                 </div>
             </section>
-            <section class="skills">
+        </div>
+        <div class="container">
+            <section class="skills" id="skills">
                 <div class="wrapper">
                     <h2 class="section-title">Skills</h2>
-                    <ul class="skills__list">
-                        <li class="skills__item">
-                            <img class="skills__img">
-                            <p class="skills__description">Digital photography</p>
-                            <p class="skills__text">
-                                High-quality photos in the studio<br>and on the nature
-                            </p>
-                        </li>
-                        <li class="skills__item">
-                            <img class="skills__img">
-                            <p class="skills__description">Video shooting</p>
-                            <p class="skills__text">
-                                Capture your moments so that<br>they always stay with you
-                            </p>
-                        </li>
-                        <li class="skills__item">
-                            <img class="skills__img">
-                            <p class="skills__description">Retouch</p>
-                            <p class="skills__text">I strive to make photography<br>surpass reality</p>
-                        </li>
-                        <li class="skills__item">
-                            <img class="skills__img">
-                            <p class="skills__description">Audio</p>
-                            <p class="skills__text">Professional sounds recording<br>for video, advertising, portfolio</p>
-                        </li>
-                    </ul>
                 </div>
+                <ul class="skills__list">
+                    <li class="skills__item">
+                        <img class="skills__img" src="./assets/svg/camera.svg" alt="camera icon">
+                        <p class="skills__description">Digital photography</p>
+                        <p class="skills__text">
+                            High-quality photos in the studio<br>and on the nature
+                        </p>
+                    </li>
+                    <li class="skills__item">
+                        <img class="skills__img" src="./assets/svg/video.svg" alt="video icon">
+                        <p class="skills__description">Video shooting</p>
+                        <p class="skills__text">
+                            Capture your moments so that<br>they always stay with you
+                        </p>
+                    </li>
+                    <li class="skills__item">
+                        <img class="skills__img" src="./assets/svg/image.svg" alt="image icon">
+                        <p class="skills__description">Retouch</p>
+                        <p class="skills__text">I strive to make photography<br>surpass reality</p>
+                    </li>
+                    <li class="skills__item">
+                        <img class="skills__img" src="./assets/svg/mic.svg" alt="micro icon">
+                        <p class="skills__description">Audio</p>
+                        <p class="skills__text">Professional sounds recording<br>for video, advertising, portfolio</p>
+                    </li>
+                </ul>
+
             </section>
-            <section class="portfolio">
+            <section class="portfolio" id="portfolio">
                 <div class="wrapper">
                     <h2 class="section-title">Portfolio</h2>
                 </div>
+                <ul class="portfolio__list">
+                    <li class="portfolio__item">
+                        <button class="button inactive__button">Winter</button>
+                    </li>
+                    <li class="portfolio__item">
+                        <button class="button inactive__button">Spring</button>
+                    </li>
+                    <li class="portfolio__item">
+                        <button class="button inactive__button">Summer</button>
+                    </li>
+                    <li class="portfolio__item">
+                        <button class="button">Autumn</button>
+                    </li>
+                </ul>
+                <ul class="portfolio__list__img">
+                    <li class="portfolio__item__img"><img class="portfolio__img" src="./assets/img/portfolio1.jpg" alt="portfolio image" width="450" height="560"></li>
+                    <li class="portfolio__item__img"><img class="portfolio__img" src="./assets/img/portfolio2.jpg" alt="portfolio image" width="450" height="560"></li>
+                    <li class="portfolio__item__img"><img class="portfolio__img" src="./assets/img/portfolio3.jpg" alt="portfolio image" width="450" height="560"></li>
+                    <li class="portfolio__item__img"><img class="portfolio__img" src="./assets/img/portfolio4.jpg" alt="portfolio image" width="450" height="560"></li>
+                    <li class="portfolio__item__img"><img class="portfolio__img" src="./assets/img/portfolio5.jpg" alt="portfolio image" width="450" height="560"></li>
+                    <li class="portfolio__item__img"><img class="portfolio__img" src="./assets/img/portfolio6.jpg" alt="portfolio image" width="450" height="560"></li>
+                </ul>
             </section>
-            <section class="video">
+            <section class="video" id="video">
                 <div class="wrapper">
                     <h2 class="section-title">Video</h2>
                 </div>
             </section>
-            <section class="price">
+            <section class="price" id="price">
                 <div class="wrapper">
                     <h2 class="section-title">Price</h2>
                 </div>
             </section>
-            <section class="contacts">
+            <section class="contacts" id="contacts">
                 <h2 class="section-title"></h2>
             </section>
 

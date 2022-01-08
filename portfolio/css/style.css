@@ -68,7 +68,7 @@ body {
     background-image: url('/portfolio/assets/img/header-bg.jpg');
     background-position: center -90px;
     background-repeat: no-repeat;
-    padding-bottom: 350px;
+    padding-bottom: 330px;
 }
 
 .hero__title {
@@ -81,3 +81,25 @@ body {
 .hero__text {
     padding: 10px 0 0 60px;
 }
+
+/* Skills */
+
+.wrapper {
+    text-align: center;
+    padding-top: 100px;
+    margin: 0 auto;
+    width: 50%;
+    background-image: linear-gradient(to top, #000 39px, #bdae82 39px, #bdae82 41px, #000 41px);
+}
+
+.section-title {
+    margin: auto;
+    display: inline-block;
+    font-family: "Merriweather";
+    font-size: 40px;
+    line-height: 80px;
+    color: var(--color-gold);
+    background-color: var(--color-black);
+    padding: 0 20px;
+}
+

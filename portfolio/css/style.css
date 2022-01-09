@@ -33,23 +33,24 @@ body {
 /* Header */
 
 .header__image {
-    background: url('/portfolio/assets/img/header-bg.jpg');
+    background: url("./portfolio/assets/img/header-bg.jpg");
     background-repeat: no-repeat;
     background-position: center 0;
-
 }
 
-.svg__logo {
-    margin-right: auto;
-    padding: 25px 20px;
+.logo {
+    margin: 25px auto 0 20px;
+    background-image: url('/portfolio/assets/svg/logo.svg');
+    background-size: contain;
+    background-repeat: no-repeat;  
+    transition: 0.3s;
+    width: 50px;
+    height: 40px;
 }
 
-.header__logo {
-    fill: var(--color-white);
-}
-
-.header__logo:hover {
-    fill: var(--color-gold);
+.logo:hover {
+    filter: invert(26%) sepia(15%) saturate(638%) hue-rotate(7deg) brightness(92%)
+    contrast(87%);
 }
 
 .button {
@@ -64,6 +65,7 @@ body {
 
 .button:hover {
     color:var(--color-white);
+    transition: 0.3s;
 }
 
 /* Navigation */
@@ -85,6 +87,7 @@ body {
 }
 
 .navigation__link {
+    line-height: 50px;
     color: var(--color-white);
 }
 
@@ -220,5 +223,17 @@ body {
 
 .button__play {
     position: absolute;
+    background-image: url('/portfolio/assets/svg/play_hover.svg');
+    background-size: contain;
+    background-repeat: no-repeat;  
+    transition: 0.3s;
+    width: 130px;
+    height: 130px;
+    cursor: pointer;
+}
+
+.button__play:hover {
+    filter: invert(26%) sepia(15%) saturate(638%) hue-rotate(7deg) brightness(92%)
+    contrast(87%);
 }
 

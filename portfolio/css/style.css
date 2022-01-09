@@ -33,14 +33,14 @@ body {
 /* Header */
 
 .header__image {
-    background: url('./assets/img/header-bg.jpg');
+    background: url("/portfolio/assets/img/header-bg.jpg");
     background-repeat: no-repeat;
     background-position: center 0;
 }
 
 .logo {
     margin: 25px auto 0 20px;
-    background-image: url('/portfolio/assets/svg/logo.svg');
+    background-image: url("/portfolio/assets/svg/logo.svg");
     background-size: contain;
     background-repeat: no-repeat;  
     transition: 0.3s;
@@ -124,7 +124,7 @@ body {
 }
 
 .hero__image {
-    background-image: url('/portfolio/assets/img/header-bg.jpg');
+    background-image: url("/portfolio/assets/img/header-bg.jpg");
     background-position: center -90px;
     background-repeat: no-repeat;
     padding-bottom: 330px;

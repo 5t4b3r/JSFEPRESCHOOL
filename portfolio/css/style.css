@@ -80,11 +80,18 @@ body {
 .navigation__list {
     display: flex;
     flex-wrap: wrap;
+    padding-right: 32px;
 }
 
 .navigation__item {
     align-self: center;
-    padding: 20px 30px;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    padding-right: 31px;
+}
+
+.navigation__item:last-child {
+    padding-right: 0;
 }
 
 .navigation__link {
@@ -98,25 +105,33 @@ body {
 }
 
 .language {
+    padding-right: 18px;
     position: relative;
     padding-top: 20px;
 }
 
 .language::before {
     position: absolute;
-    content: "/";
-    left: 35px;
-    top: 25px;
+    content: " ";
+    border: 1px solid var(--color-white);
+    height: 18px;
+    left: 36px;
+    top: 36px;
+    transform: rotate(15deg);
 }
 
 .language-button {
-    padding-right: 25px;
+    padding-right: 20px;
     font-size: 20px;
     line-height: 50px;
+    font-weight: 700;
     background: inherit;
     color: var(--color-white);
 }
 
+.language-button:last-child {
+    padding: 0;
+}
 
 .language-button__current {
     color: var(--color-gold);
@@ -126,7 +141,7 @@ body {
 
 .hero__block {
     padding-top: 160px;
-    padding-left: 60px;
+    padding-left: 80px;
 }
 
 .hero__image {
@@ -171,12 +186,14 @@ body {
 
 .skills__list {
     display: flex;
-    justify-content: space-between;
+    gap: 80px;
     flex-wrap: wrap;
     text-align: center;
+    padding: 0 20px 10px 20px;
 }
 
 .skills__item {
+    width: 280px;
     padding-top: 60px;
 }
 
@@ -207,7 +224,7 @@ body {
 }
 
 .portfolio__list__img {
-    padding-top: 35px;
+    padding-top: 60px;
     display: flex;
     flex-wrap: wrap;
     gap: 25px;
@@ -264,7 +281,8 @@ body {
 }
 
 .price__title {
-    padding-top: 43px;
+    padding-top: 40px;
+    padding-bottom: 20px;
     text-align: center;
     display: block;
     font-family: "Merriweather";
@@ -273,7 +291,6 @@ body {
 }
 
 .price__cost {
-    padding-top: 20px;
     font-family: "Merriweather";
     font-size: 24px;
     line-height: 48px;
@@ -324,7 +341,7 @@ body {
 }
 
 .contacts__form {
-    padding-top: 40px;
+    padding-top: 20px;
     line-height: 40px;
 }
 
@@ -332,10 +349,10 @@ body {
     margin-top: 20px;
     width: 450px;
     height: 50px;
-    background: inherit;
+    background: rgba(0, 0, 0, 0.5);
     display: block;
     border: 2px solid #BDAE82;
-    padding-left: 20px;
+    padding-left: 19px;
     color: var(--color-gold);
     font-size: 20px;
 }
@@ -351,12 +368,112 @@ body {
     font-size: 20px;
     line-height: 40px;
     color: var(--color-gold);
-    padding-left: 20px;
+    padding-left: 19px;
+    padding-top: 3px;
     margin: 20px 0 30px 0;
     display: block;
     width: 450px;
     height: 100px;
     resize: none;
-    background: inherit;
     border: 2px solid #BDAE82;
+    background: rgba(0, 0, 0, 0.5);
+}
+
+/* Footer */
+
+.footer__wrapper {
+    line-height: 50px;
+    padding: 50px 0 50px 0;
+    display: flex;
+    justify-content: space-between;
+}
+
+.footer__data {
+    display: flex;
+    gap: 20px;
+}
+
+.github__link {
+    color: var(--color-white);
+}
+
+.github__link:hover {
+    color: var(--color-gold);
+    transition: 0.3s;
+}
+
+.school__link {
+    color: var(--color-white);
+    padding-left: 20px;
+}
+
+.school__link:hover {
+    color: var(--color-gold);
+    transition: 0.3s;
+}
+
+.social__list {
+    padding-top: 10px;
+    display: flex;
+    gap: 20px;
+}
+
+.instagram__icon {
+    background: url('../assets/svg/inst.svg');
+    background-repeat: no-repeat;
+    background-position: center 0;
+    width: 32px;
+    height: 32px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.instagram__icon:hover {
+    filter: invert(26%) sepia(15%) saturate(638%) hue-rotate(7deg) brightness(92%)
+    contrast(87%);
+}
+
+.facebook__icon {
+    background: url('../assets/svg/fb.svg');
+    background-repeat: no-repeat;
+    background-position: center 0;
+    width: 32px;
+    height: 32px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.facebook__icon:hover {
+    filter: invert(26%) sepia(15%) saturate(638%) hue-rotate(7deg) brightness(92%)
+    contrast(87%);
+}
+
+.twitter__icon {
+    background: url('../assets/svg/tw.svg');
+    background-repeat: no-repeat;
+    background-position: center 0;
+    width: 32px;
+    height: 32px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.twitter__icon:hover {
+    filter: invert(26%) sepia(15%) saturate(638%) hue-rotate(7deg) brightness(92%)
+    contrast(87%);
+}
+
+.pinterest__icon {
+    background: url('../assets/svg/pinterest.svg');
+    background-repeat: no-repeat;
+    background-position: center 0;
+    width: 32px;
+    height: 32px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.pinterest__icon:hover {
+    filter: invert(26%) sepia(15%) saturate(638%) hue-rotate(7deg) brightness(92%)
+    contrast(87%);
 }

@@ -20,14 +20,28 @@ body {
 }
 
 .container {
-    width: 1440px;
+    max-width: 1440px;
     margin: 0 auto;
     padding: 0 20px;
 }
 
 .wrapper__content {
-    width: 1440px;
+    max-width: 1440px;
     margin: 0  auto;
+}
+
+.wrapper {
+    text-align: center;
+    padding-top: 100px;
+    margin: 0 auto;
+    width: 50%;
+    background-image: linear-gradient(to top, #000 39px, #bdae82 39px, #bdae82 41px, #000 41px);
+}
+
+@media (max-width: 768px) {
+    .wrapper {
+        padding-top: 80px;
+    }
 }
 
 /* Header */
@@ -36,6 +50,13 @@ body {
     background: url('../assets/img/header-bg.jpg');
     background-repeat: no-repeat;
     background-position: center 0;
+}
+
+@media (max-width: 768px) {
+    .header__image {
+    height: 90px;
+    background-image: url('../assets/img/bg-768.jpg');
+    }
 }
 
 .logo {
@@ -47,6 +68,12 @@ body {
     width: 50px;
     height: 40px;
     cursor: pointer;
+}
+
+@media (max-width: 768px) {
+    .logo {
+    margin-left: 60px;
+    }
 }
 
 .logo:hover {
@@ -142,6 +169,15 @@ body {
 .hero__block {
     padding-top: 160px;
     padding-left: 80px;
+    max-width: 550px;
+}
+
+@media (max-width: 786px) {
+    .hero__block {
+        padding-top: 78px;
+        padding-left: 60px;
+        width: 450px;
+    } 
 }
 
 .hero__image {
@@ -151,11 +187,28 @@ body {
     padding-bottom: 330px;
 }
 
+@media (max-width: 768px) {
+    .hero__image {
+    height: 499px;
+    background-image: url('../assets/img/bg-768.jpg');
+    padding-bottom: 0;
+ }
+}
+
 .hero__title {
     font-family: "Merriweather";
     font-size: 60px;
     line-height: 120px;
+    font-weight: 700;
     
+}
+
+@media (max-width: 768px) {
+    .hero__title {
+    font-size: 32px;
+    line-height: 64px;
+    font-weight: 400;
+ }
 }
 
 .hero__text {
@@ -163,44 +216,64 @@ body {
     padding-bottom: 25px;
 }
 
-/* Skills */
-
-.wrapper {
-    text-align: center;
-    padding-top: 100px;
-    margin: 0 auto;
-    width: 50%;
-    background-image: linear-gradient(to top, #000 39px, #bdae82 39px, #bdae82 41px, #000 41px);
+@media (max-width: 768px) {
+    .hero__text {
+    padding-top: 20px;
+    padding-bottom: 60px;
+    line-height: 24px;
+ }
 }
+
+/* Skills */
 
 .section-title {
     margin: auto;
     display: inline-block;
     font-family: "Merriweather";
+    font-weight: 700;
     font-size: 40px;
     line-height: 80px;
     color: var(--color-gold);
     background-color: var(--color-black);
-    padding: 0 20px;
+    padding: 0 22px;
 }
+
+@media (max-width: 768px) {
+    .section-title {
+        font-size: 32px;
+        font-weight: 700;
+    }
+}
+
 
 .skills__list {
     display: flex;
     gap: 80px;
     flex-wrap: wrap;
     text-align: center;
-    padding: 0 20px 10px 20px;
+    padding: 60px 50px 10px 54px;
+}
+
+@media (max-width: 768px) {
+    .skills__list {
+        padding: 45px 20px 10px 20px;
+        justify-content: center;
+    }
 }
 
 .skills__item {
     width: 280px;
-    padding-top: 60px;
 }
+
+
 
 .skills__description {
     padding-top: 50px;
     font-weight: 700;
 }
+
+
+
 
 .skills__text {
     padding-top: 20px;
@@ -208,11 +281,19 @@ body {
     line-height: 36px;
 }
 
+@media (max-width: 768px) {
+    .skills__text {
+        line-height: 22px;
+        padding: 20px 10px 40px 10px;
+    }
+}
+
 /* Portfolio */
 
 .portfolio__list {
     padding-top: 60px;
     display: flex;
+    flex-wrap: wrap;
     justify-content: center;
     gap: 5px;
 }
@@ -240,7 +321,13 @@ body {
 
 /* Video */
 
+.video__img {
+    width: 100%;
+    height: auto;
+}
+
 .video__player {
+    max-width: 1400px;
     padding-top: 60px;
     position: relative;
     display: flex;
@@ -270,6 +357,7 @@ body {
 .price__list {
     padding-top: 60px;
     display: flex;
+    flex-wrap: wrap;
     gap: 25px;
 }
 
@@ -316,12 +404,13 @@ body {
 .section__container {
     display: flex;
     justify-content: flex-end;
-    width: 1440px;
+    max-width: 1440px;
     margin: 0 -20px;
     height: 700px;
 }
 
 .contacts .section__container {
+    max-width: 1400px;
     background: url('../assets/img/contacts-bg.jpg');
     background-size: auto 700px;
     background-position: center center;

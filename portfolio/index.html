@@ -4,14 +4,14 @@
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>portfolio</title>
     <link rel="icon" type="image/png" sizes="32x32" href="./favicon.ico">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Merriweather:wght@700&display=swap" rel="stylesheet">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&family=Merriweather:wght@700&display=swap"
-        rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Merriweather:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap" rel="stylesheet">
     <link href="./css/normalize.css" rel="stylesheet">
     <link href="./css/style.css" rel="stylesheet">
 </head>
@@ -34,6 +34,20 @@
                         <a class="language-button language-button__current" href="#">en</a>
                         <a class="language-button" href="#">ru</a>
                     </div>
+                    <div class="burger-menu">
+                        <a href="#" class="burger-menu__button">
+                            <span class="burger-menu__lines"></span>
+                        </a>
+                        <nav class="burger-menu__nav">
+                            <ul class="burger-menu__nav_list">
+                                <li class="burger-menu__item"><a class="burger-menu__link" href="#skills">Skills</a></li>
+                                <li class="burger-menu__item"><a class="burger-menu__link" href="#portfolio">Portfolio</a></li>
+                                <li class="burger-menu__item"><a class="burger-menu__link" href="#video">Video</a></li>
+                                <li class="burger-menu__item"><a class="burger-menu__link" href="#price">Price</a></li>
+                                <li class="burger-menu__item"><a class="burger-menu__link" href="#contacts">Contacts</a></li>
+                            </ul> 
+                        </nav>
+                    </div>
                 </nav>
             </div>
         </div>
@@ -44,9 +58,9 @@
                 <div class="hero__image">
                     <div class="hero__block">
                         <h1 class="hero__title">Alexa Rise</h1>
-                        <p class="hero__text">Save sincere emotions, romantic feelings and<br>happy moments of life
+                        <p class="hero__text">Save sincere emotions, romantic feelings and happy moments of life
                             together with
-                            professional<br>photographer Alexa Rise</p>
+                            professional photographer Alexa Rise</p>
                         <button class="button" type="button">Hire me</button>
                     </div>
                 </div>
@@ -105,17 +119,17 @@
                 </ul>
                 <ul class="portfolio__list__img">
                     <li class="portfolio__item__img"><img class="portfolio__img" src="./assets/img/portfolio1.jpg"
-                            alt="portfolio image" width="450" height="560"></li>
+                            alt="portfolio image"></li>
                     <li class="portfolio__item__img"><img class="portfolio__img" src="./assets/img/portfolio2.jpg"
-                            alt="portfolio image" width="450" height="560"></li>
+                            alt="portfolio image"></li>
                     <li class="portfolio__item__img"><img class="portfolio__img" src="./assets/img/portfolio3.jpg"
-                            alt="portfolio image" width="450" height="560"></li>
+                            alt="portfolio image"></li>
                     <li class="portfolio__item__img"><img class="portfolio__img" src="./assets/img/portfolio4.jpg"
-                            alt="portfolio image" width="450" height="560"></li>
+                            alt="portfolio image"></li>
                     <li class="portfolio__item__img"><img class="portfolio__img" src="./assets/img/portfolio5.jpg"
-                            alt="portfolio image" width="450" height="560"></li>
+                            alt="portfolio image"></li>
                     <li class="portfolio__item__img"><img class="portfolio__img" src="./assets/img/portfolio6.jpg"
-                            alt="portfolio image" width="450" height="560"></li>
+                            alt="portfolio image"></li>
                 </ul>
             </section>
             <section class="video" id="video">
@@ -123,8 +137,6 @@
                     <h2 class="section-title">Video</h2>
                 </div>
                 <div class="video__player">
-                    <img class="video__img" src="./assets/img/video-player.jpg" width="1400" height="705"
-                        alt="video player img">
                     <button class="button__play" type="button"></button>
                 </div>
 
@@ -179,7 +191,7 @@
                         <h2 class="contacts__title">Contact me</h2>
                         <form class="contacts__form">
                             <input class="input" type="email" id="email" placeholder="E-mail">
-                            <input class="input"  type="tel" id="phone"  placeholder="Phone">
+                            <input class="input" type="tel" id="phone" placeholder="Phone">
                             <textarea class="textarea" placeholder="Message"></textarea>
                             <button class="button" type="button">Send message</button>
                         </form>
@@ -206,16 +218,24 @@
                 <a class="school__link" href="https://rs.school/js-stage0/">Rolling Scopes School</a>
                 <ul class="social__list">
                     <li class="social__item">
-                        <a class="sicoal__link" href="https://www.instagram.com"><div class="instagram__icon"></div></a>
+                        <a class="sicoal__link" href="https://www.instagram.com">
+                            <div class="instagram__icon"></div>
+                        </a>
                     </li>
                     <li class="social__item">
-                        <a class="sicoal__link" href="https://www.facebook.com"><div class="facebook__icon"></div></a>  
+                        <a class="sicoal__link" href="https://www.facebook.com">
+                            <div class="facebook__icon"></div>
+                        </a>
                     </li>
                     <li class="social__item">
-                        <a class="sicoal__link" href="https://twitter.com"><div class="twitter__icon"></div></a>
+                        <a class="sicoal__link" href="https://twitter.com">
+                            <div class="twitter__icon"></div>
+                        </a>
                     </li>
                     <li class="social__item">
-                        <a class="sicoal__link" href="https://www.pinterest.ru"><div class="pinterest__icon"></div></a>
+                        <a class="sicoal__link" href="https://www.pinterest.ru">
+                            <div class="pinterest__icon"></div>
+                        </a>
                     </li>
                 </ul>
             </div>

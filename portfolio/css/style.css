@@ -85,6 +85,7 @@ body {
 }
 
 .button {
+    position: relative;
     font-family: "Inter";
     font-weight: 400;
     font-size: 20px;
@@ -92,12 +93,16 @@ body {
     width: 220px;
     height: 55px;
     background: #BDAE82;
+    transition:0.5s;
 }
 
-.button:hover {
-    color:var(--color-white);
-    transition: 0.3s;
+
+
+.button:hover, .button:focus{
+	box-shadow: inset -7em 0 0 0 #af7124, inset 7em 0 0 0 #af7124;
 }
+
+
 
 /* Navigation */
 
@@ -444,10 +449,27 @@ body {
     }
 }
 
-.inactive__button {
-    border: 2px solid #BDAE82;
-    background-color: var(--color-black);
+.portfolio-button {font-family: "Inter";
+    font-family: "Inter";
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 40px;
+    width: 220px;
+    height: 55px;
+    background: var(--color-black);
+    border: 2px solid var(--color-gold);
     color: var(--color-gold);
+    transition:0.5s;
+}
+
+.portfolio-button.active {
+    background: var(--color-gold);
+    color:var(--color-black)
+}
+
+.portfolio-button:hover, .portfolio-button:focus{
+	box-shadow: inset -7em 0 0 0 #BDAE82, inset 7em 0 0 0 #BDAE82;
+    color: var(--color-black);
 }
 
 .portfolio__list__img {

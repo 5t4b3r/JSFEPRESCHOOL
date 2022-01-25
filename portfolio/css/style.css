@@ -6,7 +6,6 @@
 
 html {
     scroll-behavior: smooth;
-    overflow-x: hidden;
 }
 
 body {
@@ -19,18 +18,20 @@ body {
     line-height: 40px;
     color: var(--color-white);
     background-color: var(--color-black);
-    overflow-x: hidden;
+  
 }
 
 .container {
     max-width: 1440px;
     margin: 0 auto;
     padding: 0 20px;
+    
 }
 
 .wrapper__content {
     max-width: 1440px;
     margin: 0  auto;
+   
 }
 
 .wrapper {
@@ -257,14 +258,15 @@ body {
 
 .burger-menu__nav {
     padding-top: 28px;
-    position: absolute;
+    position: fixed;
     z-index: 1;
     display: flex;
     flex-direction: column;
     height: 100%;
     background: #000000;
-    right: -100%;
+    right: -620px;
     transition: 1s;
+    overflow-x: hidden;
 }
 
 .burger-menu__nav_list {

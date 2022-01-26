@@ -47,8 +47,6 @@ hamburger.addEventListener('click', function toggleMenu() {
 
 });
 
-hamburger.addEventListener('click', toggleMenu);
-
 
 // image cashe
 

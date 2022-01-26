@@ -1,26 +1,24 @@
-import i18Obj from './translate.js';
+// import i18Obj from './translate.js';
 
-console.log(i18Obj);
-
-const allButtons = document.querySelectorAll('.portfolio-button');
+const portfolioButton = document.querySelectorAll('.portfolio-button');
 const portfolioImages = document.querySelectorAll('.portfolio__img');
-const portfolioBtns = document.querySelector('.portfolio__list');
+const  allButton = document.querySelector('.portfolio__list');
 const hamburger = document.querySelector('.burger-menu');
 const seasons = ['winter', 'spring', 'summer', 'autumn'];
 
 // button current switch
 
-portfolioBtns.addEventListener('click', function changeClassActive(event) {
-  allButtons.forEach(allButtons => {
-    allButtons.classList.remove('active');
-  })
+allButton.addEventListener('click', function changeClassActive(event) {
+  portfolioButton.forEach(portfolioButton => {
+    portfolioButton.classList.remove('active')
+  });
   event.target.classList.add('active');
 });
 
 
 // image portfolio switch
 
-portfolioBtns.addEventListener('click', function changeImage(event) {
+allButton.addEventListener('click', function changeImage(event) {
   if(event.target.dataset.season == "winter") {
       portfolioImages.forEach((img, index) => img.src = `./assets/img/winter/${index + 1}.jpg`);
   }
@@ -45,9 +43,8 @@ portfolioBtns.addEventListener('click', function changeImage(event) {
 hamburger.addEventListener('click', function toggleMenu() {
   hamburger.classList.toggle('burger-menu_active');
 
-}
+});
 
-hamburger.addEventListener('click', toggleMenu);
 
 
 // image cashe

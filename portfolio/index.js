@@ -45,7 +45,7 @@ portfolioBtns.addEventListener('click', function changeImage(event) {
 hamburger.addEventListener('click', function toggleMenu() {
   hamburger.classList.toggle('burger-menu_active');
 
-}
+});
 
 hamburger.addEventListener('click', toggleMenu);
 

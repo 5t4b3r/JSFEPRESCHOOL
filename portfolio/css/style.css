@@ -479,7 +479,7 @@ body {
     display: flex;
     flex-wrap: wrap;
     gap: 25px;
-    justify-content: space-around;
+    justify-content: center;
 }
 
 @media (max-width: 768px) {

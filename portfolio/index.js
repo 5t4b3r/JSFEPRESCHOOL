@@ -9,8 +9,11 @@ const language = document.querySelector('.language');
 const langButton = document.querySelectorAll('.language-button');
 const rulanguages = document.querySelector('.button-ru');
 const enlanguages = document.querySelector('.button-en');
-const themeArry = document.querySelectorAll(['body, .skills, .portfolio, .theme-container, .header__image, .hero__image, .navigation__link, .logo, .wrapper, .section-title, .portfolio-button'])
+const themeArry = document.querySelectorAll(['body, .skills, .portfolio, .theme-container, .header__image, .hero__image, .navigation__link, .logo, .wrapper, .section-title, .portfolio-button, .hero__block, .hero__block .button, .contacts__form .button, .language-button.current, .price__item, .price__cost, .input, .textarea, .contacts__title, .contacts .section__container, .footer__data, .github__link, .school__link, .instagram__icon, .facebook__icon, .twitter__icon, .pinterest__icon'])
 const themeButton = document.querySelector('.theme-container')
+let lang = 'en'
+let theme = 'dark'
+
 
 // switch theme
 
@@ -29,8 +32,8 @@ function getTranslate(languages) {
   })
 }
 
-rulanguages.addEventListener('click', () => getTranslate('ru'));
-enlanguages.addEventListener('click', () => getTranslate('en'));
+rulanguages.addEventListener('click', () => getTranslate('ru', lang = 'ru'));
+enlanguages.addEventListener('click', () => getTranslate('en', lang = 'en'));
 
 // button portfolio current switch
 
@@ -44,7 +47,7 @@ allButton.addEventListener('click', function changeClassActive(event) {
 
 });
 
-// button leng current switch
+// // button leng current switch
 
 language.addEventListener('click', function changeClassActive(event) {
   if(event.target.classList.contains('language-button')) {
@@ -55,7 +58,7 @@ language.addEventListener('click', function changeClassActive(event) {
   event.target.classList.add('current');
 });
 
-// image portfolio switch
+// // image portfolio switch
 
 allButton.addEventListener('click', function changeImage(event) {
   if(event.target.dataset.season == "winter") {
@@ -76,13 +79,13 @@ allButton.addEventListener('click', function changeImage(event) {
   }
 });
 
-// burger menu toggle button
+// // burger menu toggle button
 
 hamburger.addEventListener('click', function toggleMenu() {
   hamburger.classList.toggle('burger-menu_active');
 });
 
-// image cashe
+// // image cashe
 
 function preloadImages() {
   for(let i = 1; i <= 6; i++) {
@@ -95,4 +98,25 @@ function preloadImages() {
 }
 preloadImages();
 
-console.log("-Вёрстка соответствует макету. Ширина экрана 768px +48\n\n-Ни на одном из разрешений до 320px включительно не появляется горизонтальная полоса прокрутки. Весь контент страницы при этом сохраняется: не обрезается и не удаляется +15\n\n-На ширине экрана 768рх и меньше реализовано адаптивное меню +22")
+
+
+
+
+function setLocalStorage() {
+  localStorage.setItem('lang', lang);
+  localStorage.setItem('theme', theme);
+}
+window.addEventListener('beforeunload', setLocalStorage);
+
+function getLocalStorage() {
+  if (localStorage.getItem('lang')) {
+      const lang = localStorage.getItem('lang');
+      getTranslate(lang);
+  }
+}
+window.addEventListener('load', getLocalStorage)
+
+
+
+
+console.log("Смена изображений в секции portfolio +25\nПеревод страницы на два языка +25\nПереключение светлой и тёмной темы +25\nДополнительный функционал: сложные эффекты для кнопок при наведении и/или клике +5\nДополнительный функционал: выбранный пользователем язык отображения страницы и светлая или тёмная тема сохраняются при перезагрузке страницы +2(только язык)\n\n Итого 77")

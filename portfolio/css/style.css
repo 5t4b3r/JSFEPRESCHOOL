@@ -202,6 +202,10 @@ body.light-theme {
     color: var(--color-gold);
 }
 
+.language-button.current.light-theme {
+    color: var(--color-black);
+}
+
 .language-button:last-child {
     padding: 0;
 }
@@ -336,6 +340,13 @@ body.light-theme {
     max-width: 550px;
 }
 
+.hero__block.light-theme {
+    color: var(--color-black);
+}
+
+.hero__block .button.light-theme {
+    background: var(--color-white);
+}
 @media (max-width: 768px) {
     .hero__block {
         padding-top: 78px;
@@ -645,6 +656,10 @@ body.light-theme {
     border: 3px solid #BDAE82;
 }
 
+.price__item.light-theme {
+    color: var(--color-black);
+}
+
 @media (max-width: 768px) {
     .price__item  {
         max-width: 420px;
@@ -666,6 +681,10 @@ body.light-theme {
     font-size: 24px;
     line-height: 48px;
     color: var(--color-gold); 
+}
+
+.price__cost.light-theme {
+    color: var(--color-black);
 }
 
 .price__wrapper-description {
@@ -711,6 +730,12 @@ body.light-theme {
     background-position: center center;
 }
 
+.contacts .section__container.light-theme {
+    background: url('../assets/img/contacts-bg-light.jpg');
+    background-size: auto 700px;
+    background-position: center center;
+}
+
 @media (max-width: 768px) {
     .contacts .section__container  {
         background: url('../assets/img/contacts-bg-768.jpg');
@@ -737,6 +762,10 @@ body.light-theme {
     color: var(--color-gold);
 }
 
+.contacts__title.light-theme {
+    color: var(--color-black);
+}
+
 @media (max-width: 768px) {
     .contacts__title  {
         text-align: center;
@@ -748,6 +777,10 @@ body.light-theme {
 .contacts__form {
     padding-top: 20px;
     line-height: 40px;
+}
+
+.contacts__form .button.light-theme {
+    background: var(--color-white);
 }
 
 @media (max-width: 768px) {
@@ -768,6 +801,11 @@ body.light-theme {
     font-size: 20px;
 }
 
+.input.light-theme {
+    color: var(--color-black);
+    background: rgb(255,255,255, 0.5);
+}
+
 @media (max-width: 460px) {
     .input {
         max-width: 320px;
@@ -775,10 +813,14 @@ body.light-theme {
     } 
 }
 
-::placeholder {
+.input::placeholder {
     font-family: inherit;
     color: #bdae82;
     font-size: 20px;
+}
+
+.input.light-theme::placeholder {
+    color: var(--color-black);
 }
 
 .textarea {
@@ -795,6 +837,21 @@ body.light-theme {
     resize: none;
     border: 2px solid #BDAE82;
     background: rgba(0, 0, 0, 0.5);
+}
+
+.textarea.light-theme {
+    color: var(--color-black);
+    background: rgb(255,255,255, 0.5);
+}
+
+.textarea::placeholder {
+    font-family: inherit;
+    color: #bdae82;
+    font-size: 20px;
+}
+
+.textarea.light-theme::placeholder {
+    color: var(--color-black);
 }
 
 @media (max-width: 460px) {
@@ -827,6 +884,10 @@ body.light-theme {
     gap: 20px;
 }
 
+.footer__data.light-theme {
+    color: var(--color-black);
+}
+
 @media (max-width: 768px) {
     .footer__data  {
         line-height: 24px;
@@ -839,6 +900,10 @@ body.light-theme {
     color: var(--color-white);
 }
 
+.github__link.light-theme {
+    color: var(--color-black);
+}
+
 .github__link:hover {
     color: var(--color-gold);
     transition: 0.3s;
@@ -847,6 +912,10 @@ body.light-theme {
 .school__link {
     color: var(--color-white);
     padding-left: 20px;
+}
+
+.school__link.light-theme {
+    color: var(--color-black);
 }
 
 @media (max-width: 768px) {
@@ -885,6 +954,12 @@ body.light-theme {
     transition: 0.3s;
 }
 
+.instagram__icon.light-theme {
+    background: url('../assets/svg/inst-light.svg');
+    background-repeat: no-repeat;
+    background-position: center 0;
+}
+
 .instagram__icon:hover {
     filter: invert(26%) sepia(15%) saturate(638%) hue-rotate(7deg) brightness(92%)
     contrast(87%);
@@ -898,6 +973,12 @@ body.light-theme {
     height: 32px;
     cursor: pointer;
     transition: 0.3s;
+}
+
+.facebook__icon.light-theme {
+    background: url('../assets/svg/fb-light.svg');
+    background-repeat: no-repeat;
+    background-position: center 0;
 }
 
 .facebook__icon:hover {
@@ -915,6 +996,13 @@ body.light-theme {
     transition: 0.3s;
 }
 
+.twitter__icon.light-theme {
+    background: url('../assets/svg/tw-light.svg');
+    background-repeat: no-repeat;
+    background-position: center 0;
+}
+
+
 .twitter__icon:hover {
     filter: invert(26%) sepia(15%) saturate(638%) hue-rotate(7deg) brightness(92%)
     contrast(87%);
@@ -928,6 +1016,12 @@ body.light-theme {
     height: 32px;
     cursor: pointer;
     transition: 0.3s;
+}
+
+.pinterest__icon.light-theme {
+    background: url('../assets/svg/pinterest-light.svg');
+    background-repeat: no-repeat;
+    background-position: center 0;
 }
 
 .pinterest__icon:hover {

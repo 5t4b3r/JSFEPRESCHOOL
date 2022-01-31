@@ -306,6 +306,11 @@ body.light-theme {
     overflow-x: hidden;
 }
 
+.burger-menu__nav.input.light-theme {
+    background: var(--color-white);
+    color: var(--color-black);
+}
+
 .burger-menu__nav_list {
     font-family: "Inter";
     font-weight: 400;
@@ -327,9 +332,26 @@ body.light-theme {
     transition: 1s;
 }
 
+
+.burger-menu_active .burger-menu__nav.light-theme {
+    position: absolute;
+    right: 0;
+    width: 620px;
+    height: 100vh;
+    transition: 1s;
+    background: var(--color-white);
+    color: var(--color-black)
+}
+
+
 .burger-menu__link {
     padding: 30px;
     color: #ffffff;
+}
+
+.burger-menu__link.light-theme {
+    padding: 30px;
+    color: var(--color-black);
 }
 
 /* Hero */

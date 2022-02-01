@@ -1,0 +1,240 @@
+:root {
+    --color-gold: #bdae82;
+    --color-black: #000000;
+    --color-white: #ffffff;
+  }
+
+body {
+    scroll-behavior: smooth;
+    display: flex;
+    flex-direction: column;
+    font-family: "Inter", sans-serif;
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 50px;
+    color: var(--color-white);
+    background-color: var(--color-black);
+}
+
+.container {
+    max-width: 1920px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.logo {
+    margin: auto auto auto 20px;
+    background-image: url('../assets/svg/logo.svg');
+    background-size: contain;
+    background-repeat: no-repeat;  
+    transition: 0.3s;
+    width: 50px;
+    height: 40px;
+    cursor: pointer;
+}
+
+.logo:hover {
+    filter: invert(26%) sepia(15%) saturate(638%) hue-rotate(7deg) brightness(92%)
+    contrast(87%);
+    transition: 0.3s;
+}
+
+/* Navigation */
+
+.navigation {
+    display: flex;
+    justify-content: end;
+    position: relative;
+}
+
+@media (max-width: 768px) {
+    .navigation {
+        height: 60px;
+    } 
+}
+
+
+.navigation__list {
+    display: flex;
+    flex-wrap: wrap;
+    padding-right: 32px;
+}
+
+@media (max-width: 768px) {
+    .navigation__list {
+        display: none;
+    } 
+}
+
+.navigation__item {
+    align-self: center;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    padding-right: 31px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.navigation__item:hover {
+    color: var(--color-gold);
+    transition: 0.3s;
+}
+
+/* Hamburger */
+
+.burger-menu__button {
+    display: none;
+    position: absolute;
+    top: 15px;
+    right: 64px;
+    z-index: 2;
+    width: 50px;
+    height: 28px;
+    background: inherit;
+}
+
+@media (max-width: 768px) {
+    .burger-menu__button {
+        display: block;
+    } 
+}
+
+.burger-menu__lines,
+.burger-menu__lines::after,
+.burger-menu__lines::before {
+    position: absolute;
+    width: 50px;
+    height: 2px;
+    background: #ffffff;
+}
+
+.burger-menu__lines {
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    transition: 0.5s;
+}
+
+.burger-menu__lines::before {
+    content: "";
+    top: -12px;
+    transition: 0.5s;
+}
+
+.burger-menu__lines::after {
+    content: "";
+    top: 12px;
+    transition: 0.5s;
+}
+
+.burger-menu_active .burger-menu__lines {
+    background: transparent;
+}
+
+.burger-menu_active .burger-menu__lines::before {
+    top: 0;
+    transform: rotate(45deg);
+}
+
+.burger-menu_active .burger-menu__lines::after {
+    top: 0;
+    transform: rotate(-45deg);
+}
+
+.burger-menu__nav {
+    padding-top: 28px;
+    position: fixed;
+    z-index: 1;
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    background: #000000;
+    right: -620px;
+    transition: 1s;
+    overflow-x: hidden;
+}
+
+.burger-menu__nav_list {
+    font-family: "Inter", sans-serif;
+    font-weight: 400;
+    font-size: 35px;
+    line-height: 73px;
+    padding-left: 97px;
+    padding-top: 106px;
+}
+
+.burger-menu__item {
+    padding-bottom: 16px;
+    padding: 30px;
+    color: #ffffff;
+}
+
+.burger-menu_active .burger-menu__nav {
+    position: absolute;
+    right: 0;
+    width: 620px;
+    height: 100vh;
+    transition: all 1s ease;
+}
+
+/* main */
+
+.wrapper {
+    background: url('../assets/img/forest.jpg');
+    height: calc(100vh - 120px);
+    min-height: 100px;
+}
+
+/* footer  */
+
+.footer__wrapper {
+    display: flex;
+    justify-content: space-between;
+    padding: 5px 0;
+}
+
+.footer__data {
+    display: flex;
+    gap: 20px;
+}
+
+@media (max-width: 768px) {
+    .footer__data  {
+        line-height: 24px;
+        gap: 22px;
+        padding-right: 5px;
+        align-self: center;
+    }
+}
+
+.github__link {
+    color: var(--color-white);
+}
+
+.github__link:hover {
+    color: var(--color-gold);
+    transition: 0.3s;
+}
+
+.school__link {
+    padding-left: 20px;
+    background: url('../assets/svg/rss.svg');
+    background-size: contain;
+    background-repeat: no-repeat;
+    width: 135px;
+    height: 50px;
+    cursor: pointer;
+}
+
+@media (max-width: 768px) {
+    .school__link  {
+        padding: 0;
+        padding-top: 16px;
+    }
+}
+
+.school__link:hover {
+    filter: invert(26%) sepia(15%) saturate(638%) hue-rotate(7deg) brightness(92%)
+    contrast(87%);
+    transition: 0.3s;
+}

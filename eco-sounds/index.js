@@ -1,9 +1,15 @@
-const hamburger = document.querySelector(".burger-menu");
+
 const navigationButton = document.querySelectorAll(".navigation__item");
 const allButton = document.querySelector(".navigation__list");
 const mainImg = document.querySelector(".main-index");
+const playerButton = document.querySelector(".player-button");
+const audio = document.querySelector("audio");
+const progress = document.querySelector(".progress")
+const progressContainer = document.querySelector('.progress-container')
+const songs = ["forest", "solovey", "drozd", "javoronok", "zarynka", "slavka"];
 
 // burger menu toggle button
+const hamburger = document.querySelector(".burger-menu");
 
 hamburger.addEventListener("click", function toggleMenu() {
   hamburger.classList.toggle("burger-menu_active");
@@ -21,18 +27,16 @@ allButton.addEventListener("click", function changeClassActive(event) {
 });
 
 // audio player
-const playerButton = document.querySelector(".player-button");
-const audio = document.querySelector("audio");
-const songs = ["forest", "solovey", "drozd", "javoronok", "zarynka", "slavka"];
+
 let songIndex = 0;
 
 function loadSong(song) {
   audio.src = `./assets/audio/${song}.mp3`;
-}
+};
 
 loadSong(songs[songIndex]);
 
-function playAudio(event) {
+function playAudio() {
   audio.classList.add("play");
   playerButton.style.backgroundImage = `url(./assets/svg/pause.svg`;
   audio.play();
@@ -52,6 +56,22 @@ playerButton.addEventListener("click", () => {
     playAudio();
   }
 });
+
+
+
+audio.addEventListener('timeupdate', function progressBar(event) {
+  const {duration, currentTime} = event.target;
+  const progressPercent = (currentTime / duration) * 100;
+  progress.style.width = `${progressPercent}%`
+})
+
+progressContainer.addEventListener('click', function setProgress (event) {
+  const width = this.clientWidth
+  const clickX = event.offsetX
+  const duration = audio.duration
+
+  audio.currentTime = (clickX / width) * duration
+})
 
 // switch image
 

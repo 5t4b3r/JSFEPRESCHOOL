@@ -27,7 +27,7 @@ body {
 }
 
 .logo {
-    background-image: url('../assets/svg/logo.svg');
+    background-image: url('../assets/svg/logo1.svg');
     background-size: contain;
     background-repeat: no-repeat;  
     transition: 0.3s;
@@ -197,12 +197,47 @@ body {
     min-height: 280px;
 }
 
+.player {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    min-width: 100%;
+}
+
 .player-button {
     background: url('../assets/svg/play.svg');
     background-repeat: no-repeat;
     background-size: contain;
     width: 160px;
     height: 160px;
+}
+
+.player-button:hover {
+    filter: sepia(38%) saturate(152%) contrast(106%) drop-shadow(10px 10px 5px #000000);
+    transition: 0.3s ease;
+}
+
+.progress-container {
+    display: flex;
+    align-items: center;
+    margin-top: 200px;
+    background: rgba(0, 0, 0, 0.5);
+    border-radius: 5px;
+    min-width: 50%;
+    height: 15px;
+    cursor: pointer;
+}
+
+.progress {
+    background: var(--color-gold);
+    /* width: 200px; */
+    height: 11px;
+    border-radius: 5px;
+}
+
+.progress-container:hover {
+    filter: sepia(38%) saturate(152%) contrast(106%) drop-shadow(10px 10px 5px #000000);
+    transition: 0.3s ease;
 }
 
 /* footer  */

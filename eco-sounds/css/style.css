@@ -75,6 +75,10 @@ body {
     transition: 0.3s;
 }
 
+.navigation__item.active {
+    color: var(--color-gold);
+}
+
 .navigation__item:hover {
     color: var(--color-gold);
     transition: 0.3s;
@@ -142,6 +146,7 @@ body {
 }
 
 .burger-menu__nav {
+    width: 0;
     padding-top: 28px;
     position: fixed;
     z-index: 1;
@@ -179,10 +184,22 @@ body {
 
 /* main */
 
-.wrapper {
+.main-index {
+    display: flex;
+    justify-content: center;
+    align-items: center;
     background: url('../assets/img/forest.jpg');
+    background-size: cover;
     height: calc(100vh - 120px);
-    min-height: 100px;
+    min-height: 280px;
+}
+
+.player-button {
+    background: url('../assets/svg/play.svg');
+    background-repeat: no-repeat;
+    background-size: contain;
+    width: 160px;
+    height: 160px;
 }
 
 /* footer  */

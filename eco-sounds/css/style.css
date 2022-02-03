@@ -175,13 +175,18 @@ body {
     .burger-menu__nav_list {
         padding-left: 0;
         text-align: center;
-
+        padding-top: 50px;
     }
 }
 .burger-menu__item {
-    padding-bottom: 16px;
     padding: 30px;
     color: #ffffff;
+}
+
+@media (max-width: 620px) {
+    .burger-menu__item {
+        padding: 10px;
+    }
 }
 
 .burger-menu_active .burger-menu__nav {

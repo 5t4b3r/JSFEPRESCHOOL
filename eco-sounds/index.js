@@ -63,7 +63,7 @@ audio.addEventListener("timeupdate", function progressBar(event) {
   const { duration, currentTime } = event.target;
   const progressPercent = (currentTime / duration) * 100;
   progress.style.width = `${progressPercent}%`;
-  
+
   if (progressPercent === 100) {
     pauseAudio();
     progress.style.width = 0;
@@ -78,7 +78,6 @@ progressContainer.addEventListener("click", function setProgress(event) {
   const duration = audio.duration;
 
   audio.currentTime = (clickX / width) * duration;
-  
 });
 
 // switch image and play sound

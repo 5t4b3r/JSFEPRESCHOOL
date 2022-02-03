@@ -7,9 +7,9 @@ const progress = document.querySelector(".progress");
 const progressContainer = document.querySelector(".progress-container");
 const songs = ["forest", "solovey", "drozd", "javoronok", "zarynka", "slavka"];
 const burgerList = document.querySelector(".burger-menu__nav_list");
+const hamburger = document.querySelector(".burger-menu");
 
 // burger menu toggle button
-const hamburger = document.querySelector(".burger-menu");
 
 hamburger.addEventListener("click", function toggleMenu() {
   hamburger.classList.toggle("burger-menu_active");
@@ -57,11 +57,15 @@ playerButton.addEventListener("click", () => {
   }
 });
 
+// progress bar
+
 audio.addEventListener("timeupdate", function progressBar(event) {
   const { duration, currentTime } = event.target;
   const progressPercent = (currentTime / duration) * 100;
   progress.style.width = `${progressPercent}%`;
 });
+
+//progress bar set
 
 progressContainer.addEventListener("click", function setProgress(event) {
   const width = this.clientWidth;

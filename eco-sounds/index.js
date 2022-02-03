@@ -97,15 +97,13 @@ burgerList.addEventListener("click", function changeImage(event) {
   playAudio();
 });
 
-// prelod image and audio
+// prelod image
 
 function preloadMedia() {
   for (let i = 1; i <= 6; i++) {
     songs.forEach((item) => {
       const img = new Image();
-      const mp3 = new Audio();
       img.src = `./assets/img/${item}.jpg`;
-      mp3.src = `./assets/audio/${item}.mp3`;
     });
   }
 }

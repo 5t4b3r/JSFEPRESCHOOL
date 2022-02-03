@@ -71,11 +71,10 @@ body {
 
 .navigation__item {
     align-self: center;
-    padding-top: 5px;
-    padding-bottom: 5px;
-    padding-right: 31px;
+    padding: 3px 13px;
     cursor: pointer;
     transition: 0.3s;
+    border: 2px solid transparent;
 }
 
 .navigation__item.active {
@@ -85,6 +84,7 @@ body {
 .navigation__item:hover {
     color: var(--color-gold);
     transition: 0.3s;
+    border-bottom: 2px solid var(--color-gold);
 }
 
 /* Hamburger */
@@ -171,6 +171,13 @@ body {
     padding-top: 106px;
 }
 
+@media (max-width: 620px) {
+    .burger-menu__nav_list {
+        padding-left: 0;
+        text-align: center;
+
+    }
+}
 .burger-menu__item {
     padding-bottom: 16px;
     padding: 30px;
@@ -183,6 +190,16 @@ body {
     width: 620px;
     height: 100vh;
     transition: all 1s ease;
+}
+
+@media (max-width: 620px) {
+    .burger-menu_active .burger-menu__nav {
+    position: absolute;
+    right: 0;
+    width: 100vw;
+    height: 100vh;
+    transition: all 1s ease;
+    } 
 }
 
 /* main */
@@ -266,6 +283,7 @@ body {
 
 .github__link {
     color: var(--color-white);
+    transition: 0.3s;
 }
 
 .github__link:hover {
@@ -281,7 +299,9 @@ body {
     width: 135px;
     height: 50px;
     cursor: pointer;
+    transition: 0.3s;
 }
+
 
 @media (max-width: 768px) {
     .school__link  {

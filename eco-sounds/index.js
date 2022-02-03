@@ -90,3 +90,17 @@ burgerList.addEventListener("click", function changeImage(event) {
   audio.src = `./assets/audio/${event.target.dataset.item}.mp3`;
   playAudio();
 });
+
+// prelod image and audio
+
+function preloadMedia() {
+  for (let i = 1; i <= 6; i++) {
+    songs.forEach((item) => {
+      const img = new Image();
+      const mp3 = new Audio();
+      img.src = `./assets/img/${item}.jpg`;
+      mp3.src = `./assets/audio/${item}.mp3`;
+    });
+  }
+}
+preloadMedia();

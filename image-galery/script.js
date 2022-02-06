@@ -30,7 +30,5 @@ form.addEventListener("submit", (event) => {
   const apiSearchURL = `${searchURL}${search.value}&per_page=30&orientation=landscape&client_id=3XqeEZ0vle1NnQWwuqMIqmsxBrLP1ZgDr_Jep0-vP-c`;
   if (search.value) {
     getData(apiSearchURL);
-
-    search.value = "";
   }
 });

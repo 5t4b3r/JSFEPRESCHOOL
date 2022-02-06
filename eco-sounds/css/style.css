@@ -13,7 +13,7 @@ body {
     font-size: 20px;
     line-height: 50px;
     color: var(--color-white);
-    background-color: var(--color-black);
+    background-color: rgba(0, 0, 0, 0.9);
 }
 
 .container {
@@ -27,7 +27,7 @@ body {
 }
 
 .logo {
-    background-image: url('../assets/svg/logo1.svg');
+    background-image: url('../assets/svg/logo.svg');
     background-size: contain;
     background-repeat: no-repeat;  
     transition: 0.3s;
@@ -93,7 +93,7 @@ body {
     display: none;
     position: absolute;
     top: 15px;
-    right: 64px;
+    right: 20px;
     z-index: 2;
     width: 50px;
     height: 28px;

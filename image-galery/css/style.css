@@ -1,0 +1,109 @@
+:root {
+    --color-yellow: #ffdb00;
+    --color-black: #000000;
+    --color-white: #ffffff;
+}
+
+html {
+    
+}
+
+body {
+    scroll-behavior: smooth;
+    display: flex;
+    flex-direction: column;
+    font-family: "Inter", sans-serif;
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 50px;
+    color: var(--color-white);
+    background: linear-gradient(45deg, rgb(152, 207, 195), rgb(86, 181, 184) 1%, rgb(237, 242, 208) 99%);
+    background-size: 5100px 5500px;
+}
+
+.container {
+    max-width: 1200px;
+    margin: auto;
+}
+
+.gallery-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+    background: var(--color-white);
+    padding: 20px 0;
+    box-shadow: 1px 2px 21px 5px rgba(0,0,0,0.46);
+}
+
+.gallery-img {
+    width: 380px;
+    height: auto;
+}
+
+@media (max-width: 768px) {
+    .gallery-img {
+        width: 100%;
+        padding: 0 20px;
+    }
+}
+
+/* footer  */
+
+.footer {
+    background: var(--color-black);
+}
+.footer__wrapper {
+    display: flex;
+    justify-content: space-between;
+    padding: 5px 0;
+
+}
+
+.footer__data {
+    display: flex;
+    gap: 20px;
+}
+
+@media (max-width: 768px) {
+    .footer__data  {
+        line-height: 24px;
+        gap: 22px;
+        padding-right: 5px;
+        align-self: center;
+    }
+}
+
+.github__link {
+    color: var(--color-white);
+    transition: 0.3s;
+}
+
+.github__link:hover {
+    filter: brightness(0) saturate(100%) invert(62%) sepia(58%) saturate(341%) hue-rotate(133deg) brightness(91%) contrast(91%);
+    transition: 0.3s;
+}
+
+.school__link {
+    padding-left: 20px;
+    background: url('../assets/svg/rss.svg');
+    background-size: contain;
+    background-repeat: no-repeat;
+    width: 135px;
+    height: 50px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+
+@media (max-width: 768px) {
+    .school__link  {
+        padding: 0;
+        padding-top: 16px;
+    }
+}
+
+.school__link:hover {
+    filter: brightness(0) saturate(100%) invert(62%) sepia(58%) saturate(341%) hue-rotate(133deg) brightness(91%) contrast(91%);
+    transition: 0.3s;
+}

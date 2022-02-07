@@ -91,6 +91,12 @@ input::-webkit-search-results-decoration { display: none; }
     transition: 1s;
 }
 
+.error-img {
+    width: 100%;
+    padding: 0 20px;
+    height: auto;
+}
+
 .gallery-img:hover {
     transform: scale(1.02);
 }

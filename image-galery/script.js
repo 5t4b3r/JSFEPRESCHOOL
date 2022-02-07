@@ -6,8 +6,13 @@ const requestURL =
 async function getData(requestURL) {
   const res = await fetch(requestURL);
   const data = await res.json();
-
-  showData(data);
+  if (data.total > 0) {
+    showData(data);
+  } else {
+    document.querySelector(".gallery-container").innerHTML = "";
+    const img = `<img class="error-img" src="./assets/img/error404.jpg">`;
+    galleryContainer.insertAdjacentHTML("beforeend", img);
+  }
 }
 getData(requestURL);
 
@@ -17,7 +22,6 @@ function showData(data) {
   data.results.map((value) => {
     const img = `<img class="gallery-img" src="${value.urls.regular}" alt="${value.alt_description}">`;
     galleryContainer.insertAdjacentHTML("beforeend", img);
-    console.log(data.results);
   });
 }
 
@@ -30,5 +34,6 @@ form.addEventListener("submit", (event) => {
   const apiSearchURL = `${searchURL}${search.value}&per_page=30&orientation=landscape&client_id=3XqeEZ0vle1NnQWwuqMIqmsxBrLP1ZgDr_Jep0-vP-c`;
   if (search.value) {
     getData(apiSearchURL);
+    console.log(search.value);
   }
 });

@@ -1,3 +1,5 @@
+const form = document.querySelector("form");
+const search = document.querySelector(".search");
 const galleryContainer = document.querySelector(".gallery-container");
 const searchURL = "https://api.unsplash.com/search/photos?query=";
 const requestURL =
@@ -9,7 +11,7 @@ async function getData(requestURL) {
   if (data.total > 0) {
     showData(data);
   } else {
-    document.querySelector(".gallery-container").innerHTML = "";
+    galleryContainer.innerHTML = "";
     const img = `<img class="error-img" src="./assets/img/error404.jpg">`;
     galleryContainer.insertAdjacentHTML("beforeend", img);
   }
@@ -17,7 +19,7 @@ async function getData(requestURL) {
 getData(requestURL);
 
 function showData(data) {
-  document.querySelector(".gallery-container").innerHTML = "";
+  galleryContainer.innerHTML = "";
 
   data.results.map((value) => {
     const img = `<img class="gallery-img" src="${value.urls.regular}" alt="${value.alt_description}">`;
@@ -25,15 +27,11 @@ function showData(data) {
   });
 }
 
-const form = document.querySelector("form");
-const search = document.querySelector(".search");
-
 form.addEventListener("submit", (event) => {
   event.preventDefault();
 
   const apiSearchURL = `${searchURL}${search.value}&per_page=30&orientation=landscape&client_id=3XqeEZ0vle1NnQWwuqMIqmsxBrLP1ZgDr_Jep0-vP-c`;
   if (search.value) {
     getData(apiSearchURL);
-    console.log(search.value);
   }
 });
